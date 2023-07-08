@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/input.css" />
+    <link rel="shortcut icon" href="paint-favicon.png" type="image/x-icon" />
+    <script defer src="js/main.js"></script>
+    <title>Paint With Canvas</title>
+  </head>
+  <body class="text-[#101820] dark:bg-[#101820] h-screen overflow-hidden">
+    <div class="toggle absolute top-[3%] right-[5%] cursor-pointer">
+      <div class="light hidden" title="Light Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="white"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+
+      <div class="dark hidden" title="Dark Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="black"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <canvas id="draw" width="800" height="800"></canvas>
+  </body>
+</html>

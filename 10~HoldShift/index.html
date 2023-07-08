@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/input.css" />
+    <link rel="shortcut icon" href="shift-favicon.png" type="image/x-icon" />
+    <script defer src="js/main.js"></script>
+    <title>Hold Shift</title>
+  </head>
+  <body
+    class="bg-[#FEE715] text-[#101820] dark:bg-[#101820] dark:text-[#FEE715] min-h-screen grid place-content-center"
+  >
+    <h1
+      class="font-bold text-5xl select-none absolute underline top-[10%] left-[50%] translate-x-[-50%] underline-offset-8 whitespace-nowrap"
+    >
+      HOLD SHIFT
+    </h1>
+    <div class="toggle absolute top-[3%] right-[5%] cursor-pointer">
+      <div class="light hidden" title="Light Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="white"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+
+      <div class="dark hidden" title="Dark Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="black"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div
+      class="inbox bg-white dark:bg-[#101820] shadow-xl mx-10 px-4 py-2 mt-16 dark:border-2 border-[#FEE715]"
+    >
+      <div class="item flex justify-center items-center border-b">
+        <input type="checkbox" />
+        <p class="p-1 text-lg font-medium flex-1 ml-2 select-none">
+          This is an inbox layout.
+        </p>
+      </div>
+      <div class="item flex justify-center items-center border-b">
+        <input type="checkbox" />
+        <p class="p-1 text-lg font-medium flex-1 ml-2 select-none">
+          Check one item
+        </p>
+      </div>
+      <div class="item flex justify-center items-center border-b">
+        <input type="checkbox" />
+        <p class="p-1 text-lg font-medium flex-1 ml-2 select-none">
+          Hold down your Shift key
+        </p>
+      </div>
+      <div class="item flex justify-center items-center border-b">
+        <input type="checkbox" />
+        <p class="p-1 text-lg font-medium flex-1 ml-2 select-none">
+          Check a lower item
+        </p>
+      </div>
+      <div class="item flex justify-center items-center border-b">
+        <input type="checkbox" />
+        <p class="p-1 text-lg font-medium flex-1 ml-2 select-none">
+          Everything in between should also be set to checked
+        </p>
+      </div>
+      <div class="item flex justify-center items-center border-b">
+        <input type="checkbox" />
+        <p class="p-1 text-lg font-medium flex-1 ml-2 select-none">
+          Try do it without any libraries
+        </p>
+      </div>
+      <div class="item flex justify-center items-center border-b">
+        <input type="checkbox" />
+        <p class="p-1 text-lg font-medium flex-1 ml-2 select-none">
+          Just regular JavaScript
+        </p>
+      </div>
+      <div class="item flex justify-center items-center border-b">
+        <input type="checkbox" />
+        <p class="p-1 text-lg font-medium flex-1 ml-2 select-none">
+          Good Luck!
+        </p>
+      </div>
+      <div class="item flex justify-center items-center">
+        <input type="checkbox" />
+        <p class="p-1 text-lg font-medium flex-1 ml-2 select-none">
+          Don't forget to thread your result!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

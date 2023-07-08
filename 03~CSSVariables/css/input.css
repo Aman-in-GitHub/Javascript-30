@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --base: #ffffff;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+.text {
+  color: var(--base);
+}
+
+img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+}

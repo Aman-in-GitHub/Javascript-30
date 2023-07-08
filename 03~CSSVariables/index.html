@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/input.css" />
+    <link rel="shortcut icon" href="css-favicon.png" type="image/x-icon" />
+    <script defer src="js/main.js"></script>
+    <title>CSS Variables</title>
+  </head>
+  <body
+    class="bg-[#FEE715] text-[#101820] dark:bg-[#101820] dark:text-[#FEE715] min-h-screen grid place-content-center"
+  >
+    <h1
+      class="font-bold text-5xl select-none absolute underline top-[10%] left-[50%] translate-x-[-50%] underline-offset-8 whitespace-nowrap"
+    >
+      CSS<span class="text-change-base"> Variables</span>
+    </h1>
+    <div class="toggle absolute top-[3%] right-[5%] cursor-pointer">
+      <div class="light hidden" title="Light Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="white"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+
+      <div class="dark hidden" title="Dark Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="black"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div
+      class="flex justify-center items-center flex-wrap gap-4 py-4 font-semibold text-xl lg:mt-20 controls"
+    >
+      <label for="spacing" class="select-none">Spacing:</label>
+      <input
+        id="spacing"
+        type="range"
+        name="spacing"
+        min="10"
+        max="60"
+        value="10"
+        data-sizing="px"
+        class="accent-transparent cursor-pointer dark:accent-white"
+      />
+
+      <label for="blur" class="select-none">Blur:</label>
+      <input
+        id="blur"
+        type="range"
+        name="blur"
+        min="0"
+        max="30"
+        value="10"
+        data-sizing="px"
+        class="accent-transparent cursor-pointer dark:accent-white"
+      />
+
+      <label for="base" class="select-none">Color:</label>
+      <input
+        id="base"
+        name="base"
+        type="color"
+        value="#ffffff"
+        class="bg-transparent cursor-pointer"
+      />
+    </div>
+
+    <div class="w-[70%] md:w-[60%] lg:w-[40%] mt-10 mx-auto">
+      <img src="space.jpg" class="w-[100%]" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/input.css" />
+    <link
+      rel="shortcut icon"
+      href="image-gallery-favicon.png"
+      type="image/x-icon"
+    />
+    <script defer src="js/main.js"></script>
+    <title>Image Gallery</title>
+  </head>
+  <body
+    class="bg-[#FEE715] text-[#101820] dark:bg-[#101820] dark:text-[#FEE715] min-h-screen grid items-center"
+  >
+    <h1
+      class="font-bold text-5xl select-none absolute underline top-[5%] left-[50%] translate-x-[-50%] underline-offset-8 whitespace-nowrap"
+    >
+      Image Gallery
+    </h1>
+    <div class="toggle absolute top-[2%] right-[5%] cursor-pointer">
+      <div class="light hidden" title="Light Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="white"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+
+      <div class="dark hidden" title="Dark Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="black"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div
+      class="panelCollection flex min-h-[70vh] overflow-hidden overflow-x-auto font-bold text-xl lg:text-3xl"
+    >
+      <div
+        class="panel flex-[1] flex flex-col justify-center items-center panel1 duration-500"
+      >
+        <p
+          class="flex -translate-y-full flex-auto justify-center items-center duration-500"
+        >
+          Hey
+        </p>
+        <p class="flex flex-auto justify-center items-center duration-500">
+          Let's
+        </p>
+        <p
+          class="flex translate-y-full flex-auto justify-center items-center duration-500"
+        >
+          Dance
+        </p>
+      </div>
+      <div
+        class="panel flex-[1] flex flex-col justify-center items-center panel2 duration-500"
+      >
+        <p
+          class="flex -translate-y-full flex-auto justify-center items-center duration-500"
+        >
+          Give
+        </p>
+        <p class="flex flex-auto justify-center items-center duration-500">
+          Take
+        </p>
+        <p
+          class="flex translate-y-full flex-auto justify-center items-center duration-500"
+        >
+          Receive
+        </p>
+      </div>
+      <div
+        class="panel flex-[1] flex flex-col justify-center items-center panel3 duration-500"
+      >
+        <p
+          class="flex -translate-y-full flex-auto justify-center items-center duration-500"
+        >
+          Experience
+        </p>
+        <p class="flex justify-center items-center duration-500">It</p>
+        <p
+          class="flex translate-y-full flex-auto justify-center items-center duration-500"
+        >
+          Today
+        </p>
+      </div>
+      <div
+        class="panel flex-[1] flex flex-col justify-center items-center panel4 duration-500"
+      >
+        <p
+          class="flex -translate-y-full flex-auto justify-center items-center duration-500"
+        >
+          Give
+        </p>
+        <p
+          class="flex flex-auto justify-center items-center duration-500 mt-10 md:mt-0"
+        >
+          All
+        </p>
+        <p
+          class="flex flex-col md:flex-row translate-y-full flex-auto justify-center items-center duration-500"
+        >
+          You<span class="mt-4 md:mt-0 md:ml-3">Can</span>
+        </p>
+      </div>
+      <div
+        class="panel flex-[1] flex flex-col justify-center items-center panel5 duration-500"
+      >
+        <p
+          class="flex -translate-y-full flex-auto justify-center items-center duration-500"
+        >
+          Life
+        </p>
+        <p class="flex flex-auto justify-center items-center duration-500">
+          In
+        </p>
+        <p
+          class="flex translate-y-full flex-auto justify-center items-center duration-500"
+        >
+          Motion
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

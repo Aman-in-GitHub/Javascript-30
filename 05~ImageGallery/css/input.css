@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.panelCollection::-webkit-scrollbar {
+  display: none;
+}
+
+.panel {
+  cursor: pointer;
+}
+
+.flex-increase {
+  flex: 3;
+  color: white;
+  font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 767px) {
+  .flex-increase {
+    flex: 1;
+    padding: 0 15px;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.translate-0 {
+  transform: translateY(0);
+}
+
+.panel1 {
+  background: url(../1.jpg) center center/cover;
+}
+.panel2 {
+  background: url(../2.jpg) center center/cover;
+}
+.panel3 {
+  background: url(../3.jpg) center center/cover;
+}
+.panel4 {
+  background: url(../4.jpg) center center/cover;
+}
+.panel5 {
+  background: url(../5.jpg) center center/cover;
+}

@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hl {
+  background-color: #fee715;
+  padding: 0 6px;
+  font-weight: 600;
+  color: #101820;
+  margin: 0 3px;
+}
+
+input::selection {
+  background-color: #fee715;
+  color: #101820;
+}
+
+.population {
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+.suggestions::-webkit-scrollbar {
+  display: none;
+}
+
+.suggestions li {
+  background: #101820;
+  color: white;
+  padding: 8px 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-left: 2px solid #fee715;
+  border-right: 2px solid #fee715;
+  user-select: none;
+  cursor: pointer;
+}
+
+.suggestions li:first-child {
+  border-top: 2px solid #fee715;
+}
+
+.suggestions li:last-child {
+  border-bottom: 2px solid #fee715;
+}

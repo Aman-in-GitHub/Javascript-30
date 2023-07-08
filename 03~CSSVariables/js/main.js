@@ -19,7 +19,7 @@ function handleChange() {
 
 inputs.forEach((input) => input.addEventListener('change', handleChange));
 
-inputs.forEach((input) => input.addEventListener('mousemove', handleChange));
+inputs.forEach((input) => input.addEventListener('pointermove', handleChange));
 
 const userTheme = localStorage.getItem('theme');
 const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;

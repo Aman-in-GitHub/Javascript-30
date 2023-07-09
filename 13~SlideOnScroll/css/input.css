@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img {
+  padding: 20px;
+}
+
+.slide-in {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.align-left.slide-in {
+  transform: translateX(-30%) scale(0.9);
+}
+
+.align-right.slide-in {
+  transform: translateX(30%) scale(0.9);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}

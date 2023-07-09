@@ -11,6 +11,10 @@ input {
   cursor: pointer;
 }
 
+input[type='text'] {
+  cursor: auto;
+}
+
 label {
   padding-left: 5px;
   cursor: pointer;

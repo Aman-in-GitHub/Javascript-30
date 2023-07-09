@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/input.css" />
+    <link rel="shortcut icon" href="storage-favicon.png" type="image/x-icon" />
+    <script defer src="js/main.js"></script>
+    <title>Local Storage</title>
+  </head>
+  <body
+    class="bg-[#FEE715] text-[#101820] dark:bg-[#101820] dark:text-[#FEE715] min-h-screen grid place-content-center"
+  >
+    <h1
+      class="font-bold text-5xl select-none absolute underline top-[10%] left-[50%] translate-x-[-50%] underline-offset-8 whitespace-nowrap"
+    >
+      Local Storage
+    </h1>
+    <div class="toggle absolute top-[3%] right-[5%] cursor-pointer">
+      <div class="light hidden" title="Light Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="white"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+
+      <div class="dark hidden" title="Dark Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="black"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div class="wrapper -mt-32 mx-2">
+      <h1 class="text-xl py-2 font-bold">LOCAL TAPAS</h1>
+      <form class="add-items relative">
+        <input
+          type="text"
+          name="item"
+          placeholder="Item Name"
+          class="px-2 py-1 font-semibold outline-none dark:bg-gray-800"
+          required
+        />
+        <input
+          type="submit"
+          value="+ Add Item"
+          class="px-2 ml-2 py-1 font-semibold border-2 dark:border-[#FEE715] border-[#101820] text-[#101820] dark:text-[#FEE715] cursor-pointer active:scale-95 duration-500"
+        />
+        <ul
+          class="plates absolute w-full top-[135%] h-[40vh] space-y-1 text-lg overflow-y-auto"
+        ></ul>
+      </form>
+    </div>
+  </body>
+</html>

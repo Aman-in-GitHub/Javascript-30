@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+input {
+  accent-color: yellow;
+  cursor: pointer;
+}
+
+label {
+  padding-left: 5px;
+  cursor: pointer;
+}

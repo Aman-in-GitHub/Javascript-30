@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#bands {
+  list-style: inside square;
+  width: 250px;
+  margin-top: 6rem;
+  padding: 0 5px;
+  box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+#bands li {
+  border-bottom: 1px solid #efefef;
+  font-weight: 600;
+  padding: 6px;
+}
+
+#bands li:last-child {
+  border-bottom: 0;
+}
+
+a {
+  color: #ffc600;
+  text-decoration: none;
+}

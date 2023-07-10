@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/input.css" />
+    <link
+      rel="shortcut icon"
+      href="text-to-speech-favicon.png"
+      type="image/x-icon"
+    />
+    <script defer src="js/main.js"></script>
+    <title>Text To Speech</title>
+  </head>
+  <body
+    class="bg-[#FEE715] text-[#101820] dark:bg-[#101820] dark:text-[#FEE715] min-h-screen grid place-content-center"
+  >
+    <h1
+      class="font-bold text-3xl md:text-5xl select-none absolute underline top-[10%] left-[50%] translate-x-[-50%] underline-offset-8 whitespace-nowrap"
+    >
+      Text To Speech
+    </h1>
+    <div class="toggle absolute top-[3%] right-[5%] cursor-pointer">
+      <div class="light hidden" title="Light Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="white"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+
+      <div class="dark hidden" title="Dark Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="black"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div
+      class="voiceinator flex flex-col px-8 py-5 justify-center items-center gap-3 font-semibold border-4 border-[#101820] dark:border-[#FEE715]"
+    >
+      <h1 class="text-2xl font-bold">The Voiceinator 5000</h1>
+
+      <select
+        name="voice"
+        id="voices"
+        class="text-xs text-center w-[150px] bg-transparent dark:border-slate-50 border border-[#101820] outline-none"
+      >
+        <option value="">Select A Voice</option>
+      </select>
+
+      <label for="rate">Rate:</label>
+      <input
+        name="rate"
+        type="range"
+        min="0"
+        max="3"
+        value="1"
+        step="0.1"
+        class="accent-yellow-400 h-1"
+      />
+
+      <label for="pitch">Pitch:</label>
+      <input
+        name="pitch"
+        type="range"
+        min="0"
+        max="2"
+        step="0.1"
+        class="accent-yellow-400 h-1"
+      />
+
+      <textarea
+        name="text"
+        class="h-32 w-60 px-2 py-0.5 resize-none overflow-y-auto dark:bg-transparent dark:border outline-none"
+      >
+Hello! I love JavaScript 👍</textarea
+      >
+
+      <div class="flex justify-between items-center gap-8">
+        <button
+          id="stop"
+          class="bg-[rgba(0,0,0,0.2)] dark:border px-3 py-1 font-medium rounded-md active:scale-90 duration-300"
+        >
+          Stop!
+        </button>
+        <button
+          id="speak"
+          class="bg-[rgba(0,0,0,0.2)] dark:border px-3 py-1 font-medium rounded-md active:scale-90 duration-300"
+        >
+          Speak
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

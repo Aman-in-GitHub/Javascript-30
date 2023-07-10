@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/input.css" />
+    <link
+      rel="shortcut icon"
+      href="speedometer-favicon.png"
+      type="image/x-icon"
+    />
+    <script defer src="js/main.js"></script>
+    <title>Video Speed UI</title>
+  </head>
+  <body
+    class="bg-[#FEE715] text-white dark:bg-[#101820] dark:text-[#FEE715] min-h-screen grid place-content-center overflow-hidden"
+  >
+    <h1
+      class="font-bold text-4xl md:text-5xl select-none absolute underline top-[10%] left-[50%] translate-x-[-50%] underline-offset-8 whitespace-nowrap text-[#101820] dark:text-[#FEE715]"
+    >
+      Video Speed UI
+    </h1>
+    <div class="toggle absolute top-[3%] right-[5%] cursor-pointer">
+      <div class="light hidden" title="Light Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="white"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+
+      <div class="dark hidden" title="Dark Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="black"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="flex justify-center gap-4 items-center mx-4 lg:gap-16">
+      <div
+        class="player shadow-xl dark:border-2 dark:border-[#FEE715] overflow-hidden relative select-none mx-2 w-[80%] lg:mx-0 md:mt-32 group"
+      >
+        <video
+          class="player__video viewer lg:max-w-[900px]"
+          src="Peaky Blinders.mp4"
+          poster="thumbnail.jpg"
+        ></video>
+
+        <div
+          class="player__controls w-full absolute bottom-0 lg:translate-y-20 lg:group-hover:translate-y-0 lg:duration-300"
+        >
+          <div
+            class="progress bg-[rgba(0,0,0,0.3)] w-full h-3 md:h-4 cursor-pointer"
+          >
+            <div class="progress__filled bg-yellow-300 w-0 h-3 md:h-4"></div>
+          </div>
+          <div
+            class="flex justify-between items-center mx-5 py-0.5 md:py-2 whitespace-nowrap"
+          >
+            <button class="player__button toggle cursor-pointer text-lg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="currentColor"
+                class="bi bi-play-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
+                />
+              </svg>
+            </button>
+            <div class="flex-1 text-right space-x-2">
+              <input
+                type="range"
+                name="volume"
+                class="player__slider cursor-pointer volume w-[45%] md:w-[30%] lg:w-[20%] accent-white dark:accent-[#FEE715]"
+                min="0"
+                max="1"
+                step="0.05"
+                value="0.4"
+                title="Volume"
+              />
+
+              <input
+                type="range"
+                name="playbackRate"
+                class="player__slider cursor-pointer playBack w-[25%] md:w-[15%] lg:w-[10%] accent-white dark:accent-[#FEE715]"
+                min="0.5"
+                max="4"
+                step="0.1"
+                value="1"
+                title="Speed"
+              />
+            </div>
+            <div
+              class="font-mono pl-5 space-x-2 text-xs md:text-base -mr-2 md:-mr-0"
+            >
+              <button data-skip="-10" class="player__button">« 10s</button>
+              <button data-skip="25" class="player__button">25s »</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="wrapper mx-auto flex w-12 h-[12rem] md:h-[25rem] lg:h-[32rem] md:w-16 rounded-[100vmax] overflow-hidden dark:border-[#FEE715] border-2 border-[#101820] lg:mx-0 md:mt-32 font-serif"
+      >
+        <div class="speed flex-1 cursor-pointer">
+          <div
+            class="speed-bar py-5 dark:bg-[#FEE715] bg-[#101820] text-[#FEE715] dark:text-[#101820] w-[100%] h-16 flex justify-center items-center font-semibold text-xs md:text-lg select-none"
+          >
+            1×
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

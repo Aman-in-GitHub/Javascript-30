@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+div {
+  width: 100%;
+  padding: 60px;
+}
+
+.one {
+  background: thistle;
+}
+
+.two {
+  background: mistyrose;
+}
+
+.three {
+  background: coral;
+}

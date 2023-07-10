@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/input.css" />
+    <link rel="shortcut icon" href="webcam-favicon.png" type="image/x-icon" />
+    <script defer src="js/main.js"></script>
+    <title>Unreal Webcam</title>
+  </head>
+  <body
+    class="bg-[#FEE715] text-[#101820] dark:bg-[#101820] dark:text-[#FEE715]"
+  >
+    <h1
+      class="font-bold text-3xl md:text-5xl select-none absolute underline top-[2%] left-[50%] translate-x-[-50%] underline-offset-8 whitespace-nowrap"
+    >
+      Unreal Webcam
+    </h1>
+    <div class="toggle absolute top-[3%] right-[5%] cursor-pointer">
+      <div class="light hidden" title="Light Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="white"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+
+      <div class="dark hidden" title="Dark Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="black"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div class="photobooth mt-36 lg:mt-20">
+      <div class="controls flex justify-center py-2">
+        <button
+          onClick="takePhoto()"
+          class="font-semibold text-lg active:scale-90 duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-camera"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"
+            />
+            <path
+              d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <canvas
+        class="photo w-[350px] md:w-[650px] lg:w-[900px] mx-auto h-[35vh] md:h-[50vh] lg:h-[70vh]"
+      ></canvas>
+      <video
+        class="player absolute top-[10%] right-5 md:top-[8%] lg:top-[12%] w-[60px] lg:w-[180px] border-2 border-[#101820] dark:border-[#FEE715]"
+      ></video>
+      <div
+        class="strip mt-5 lg:mt-0 dark:border-2 dark:border-[#FEE715] overflow-y-auto h-[23vh] lg:h-[12vh] flex flex-wrap gap-2 w-[350px] md:w-[650px] lg:w-[900px] mx-auto"
+      ></div>
+    </div>
+
+    <audio class="snap" src="./snap.mp3" hidden></audio>
+  </body>
+</html>

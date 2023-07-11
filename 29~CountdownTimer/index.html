@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/input.css" />
+    <link
+      rel="shortcut icon"
+      href="hour-glass-favicon.png"
+      type="image/x-icon"
+    />
+    <script defer src="js/main.js"></script>
+    <title>Countdown Timer</title>
+  </head>
+  <body
+    class="bg-[#FEE715] text-[#101820] dark:bg-[#101820] dark:text-[#FEE715] min-h-screen grid place-content-center"
+  >
+    <h1
+      class="font-bold text-3xl md:text-5xl select-none absolute underline top-[10%] left-[50%] translate-x-[-50%] underline-offset-8 whitespace-nowrap"
+    >
+      Countdown Timer
+    </h1>
+    <div class="toggle absolute top-[3%] right-[5%] cursor-pointer">
+      <div class="light hidden" title="Light Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="white"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+
+      <div class="dark hidden" title="Dark Mode">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="black"
+          class="bi bi-yin-yang"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"
+          />
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div class="timer relative">
+      <div
+        class="timer__controls flex gap-4 mx-4 justify-center flex-wrap items-center"
+      >
+        <button
+          data-time="20"
+          class="timer__button bg-[rgba(0,0,0,0.1)] px-2 py-1 rounded-sm active:scale-95 font-medium dark:border-[#FEE715] dark:border-2 duration-300 md:text-xl md:px-4"
+        >
+          20 Secs
+        </button>
+        <button
+          data-time="300"
+          class="timer__button bg-[rgba(0,0,0,0.1)] px-2 py-1 rounded-sm active:scale-95 font-medium dark:border-[#FEE715] dark:border-2 duration-300 md:text-xl md:px-4"
+        >
+          Work 5
+        </button>
+        <button
+          data-time="900"
+          class="timer__button bg-[rgba(0,0,0,0.1)] px-2 py-1 rounded-sm active:scale-95 font-medium dark:border-[#FEE715] dark:border-2 duration-300 md:text-xl md:px-4"
+        >
+          Quick 15
+        </button>
+        <button
+          data-time="1200"
+          class="timer__button bg-[rgba(0,0,0,0.1)] px-2 py-1 rounded-sm active:scale-95 font-medium dark:border-[#FEE715] dark:border-2 duration-300 md:text-xl md:px-4"
+        >
+          Snack 20
+        </button>
+        <button
+          data-time="3600"
+          class="timer__button bg-[rgba(0,0,0,0.1)] px-2 py-1 rounded-sm active:scale-95 font-medium dark:border-[#FEE715] dark:border-2 duration-300 md:text-xl md:px-4"
+        >
+          Lunch Break
+        </button>
+      </div>
+      <form
+        id="custom"
+        class="left-[50%] top-[120%] md:top-[150%] translate-x-[-50%] absolute"
+      >
+        <input
+          type="text"
+          name="minutes"
+          placeholder="Enter Minutes"
+          class="bg-transparent placeholder:text-[#101820] dark:border-[#FEE715] dark:placeholder:text-[#FEE715] border-2 px-2 py-1 border-[#101820] outline-none font-medium"
+        />
+      </form>
+      <div
+        class="display left-[50%] top-[200%] md:top-[300%] translate-x-[-50%] absolute text-center font-mono text-xl font-semibold"
+      >
+        <h1 class="display__time-left"></h1>
+        <p class="display__end-time"></p>
+      </div>
+    </div>
+  </body>
+</html>
